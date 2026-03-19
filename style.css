@@ -964,3 +964,253 @@ body::after {
     padding: 8px;
   }
 }
+
+/* ========== Desktop Layout (>= 900px) ========== */
+@media (min-width: 900px) {
+  #app {
+    max-width: 960px;
+    padding-top: 0;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---- Header: wider, more spacious ---- */
+  .header {
+    position: sticky;
+    top: 0;
+    border-radius: 0;
+    z-index: 101;
+  }
+
+  .header-inner {
+    padding: 16px 36px;
+  }
+
+  .logo-text {
+    font-size: 1.6rem;
+  }
+
+  .level-badge {
+    padding: 6px 18px;
+  }
+
+  .level-number {
+    font-size: 1.6rem;
+  }
+
+  /* ---- Nav: static centered top bar ---- */
+  .nav {
+    position: relative;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 520px;
+    width: 100%;
+    border-radius: 0 0 var(--radius) var(--radius);
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-top: none;
+    padding: 0;
+    gap: 0;
+    background: rgba(7, 10, 24, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-btn {
+    flex: 1 1 0;
+    max-width: 220px;
+    min-width: 0;
+    text-align: center;
+  }
+
+  .nav::before {
+    top: auto;
+    bottom: -1px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
+    opacity: 0.3;
+  }
+
+  .nav-btn {
+    flex: none;
+    padding: 14px 32px;
+    border-radius: 0;
+    clip-path: none;
+    font-size: 0.9rem;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+  }
+
+  .nav-btn:hover {
+    background: rgba(79, 142, 255, 0.06);
+    border-bottom-color: var(--border-bright);
+  }
+
+  .nav-btn.active {
+    background: rgba(79, 142, 255, 0.08);
+    border-bottom-color: var(--accent);
+    box-shadow: none;
+    clip-path: none;
+  }
+
+  /* ---- Pages: more padding ---- */
+  .page {
+    padding: 36px 40px;
+  }
+
+  .page-header {
+    margin-bottom: 32px;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.82rem;
+  }
+
+  /* ---- XP Bar: taller ---- */
+  .xp-bar {
+    height: 14px;
+  }
+
+  /* ---- Stats: 3 columns on desktop, wider cards ---- */
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .stat-name {
+    font-size: 0.7rem;
+  }
+
+  .stat-bar {
+    height: 4px;
+  }
+
+  /* Keep last-child spanning only if it's the 5th (odd in 3-col) */
+  .stats-grid .stat-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+
+  /* Make the last two cards span 3 columns evenly */
+  .stats-grid .stat-card:nth-child(4) {
+    grid-column: 1 / 2;
+  }
+  .stats-grid .stat-card:nth-child(5) {
+    grid-column: 2 / 4;
+  }
+
+  /* ---- Today summary: side-by-side rows ---- */
+  .today-summary {
+    padding: 24px 28px;
+  }
+
+  .today-summary h2 {
+    font-size: 1rem;
+  }
+
+  .summary-row {
+    font-size: 0.9rem;
+    padding: 12px 0;
+  }
+
+  /* ---- Quests: 2-column grid ---- */
+  .quests-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .quest-card {
+    padding: 22px;
+  }
+
+  .quest-title {
+    font-size: 1.1rem;
+  }
+
+  .quest-desc {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.82rem;
+    padding: 10px 22px;
+  }
+
+  /* ---- All-done block: span full width ---- */
+  .all-done {
+    grid-column: 1 / -1;
+    padding: 60px 20px;
+  }
+
+  /* ---- Bonus header: span full width ---- */
+  .bonus-header {
+    grid-column: 1 / -1;
+  }
+
+  /* ---- Toast: slightly bigger ---- */
+  .toast {
+    font-size: 0.85rem;
+    padding: 14px 28px;
+    top: 90px;
+  }
+
+  .toast.level-up {
+    font-size: 1.1rem;
+  }
+
+  /* ---- Quests footer spans both cols ---- */
+  .quests-footer {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
+
+/* ========== Extra-wide Desktop (>= 1200px) ========== */
+@media (min-width: 1200px) {
+  #app {
+    max-width: 1080px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  /* Reset the span overrides for 5-col layout */
+  .stats-grid .stat-card:nth-child(4),
+  .stats-grid .stat-card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .stats-grid .stat-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .page {
+    padding: 40px 48px;
+  }
+
+  .page-header h1 {
+    font-size: 2.4rem;
+  }
+}

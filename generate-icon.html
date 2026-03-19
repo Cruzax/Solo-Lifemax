@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><title>Generate Apple Touch Icon</title></head>
+<body style="background:#111;color:#fff;font-family:sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:20px;">
+<h1>Apple Touch Icon Generator</h1>
+<canvas id="c" width="180" height="180" style="border:1px solid #333;border-radius:20px;"></canvas>
+<a id="dl" download="apple-touch-icon.png" style="background:#7c3aed;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;cursor:pointer;">Télécharger apple-touch-icon.png</a>
+<p style="color:#888;font-size:0.85rem;">Place le fichier téléchargé dans le même dossier que index.html</p>
+<script>
+var c = document.getElementById('c');
+var x = c.getContext('2d');
+
+// Full fill (iOS clips corners itself)
+var g = x.createLinearGradient(0,0,180,180);
+g.addColorStop(0,'#7c3aed');
+g.addColorStop(1,'#4f46e5');
+x.fillStyle = g;
+x.fillRect(0,0,180,180);
+
+// Diamond
+x.beginPath();
+x.moveTo(90,25);
+x.lineTo(150,85);
+x.lineTo(90,145);
+x.lineTo(30,85);
+x.closePath();
+var dg = x.createLinearGradient(30,25,150,145);
+dg.addColorStop(0,'#ffffff');
+dg.addColorStop(1,'#c4b5fd');
+x.fillStyle = dg;
+x.globalAlpha = 0.95;
+x.fill();
+
+// Diamond highlight
+x.beginPath();
+x.moveTo(90,25);
+x.lineTo(150,85);
+x.lineTo(90,85);
+x.closePath();
+x.fillStyle = '#ffffff';
+x.globalAlpha = 0.3;
+x.fill();
+x.globalAlpha = 1;
+
+// Text
+x.font = 'bold 19px Inter, Arial, sans-serif';
+x.textAlign = 'center';
+x.textBaseline = 'middle';
+x.fillStyle = 'rgba(255,255,255,0.9)';
+x.fillText('LIFEMAX', 90, 170);
+
+// Set download link
+document.getElementById('dl').href = c.toDataURL('image/png');
+</script>
+</body>
+</html>
