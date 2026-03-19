@@ -88,51 +88,51 @@
   ];
 
   const QUEST_POOL = [
-    { title: { en: "Morning Stretch",       fr: "Étirement matinal" },        desc: { en: "Do a 10-minute stretch routine after waking up.",               fr: "Fais une routine d'étirements de 10 min au réveil." },             rewards: { health: 3, energy: 2 } },
-    { title: { en: "Read 20 Pages",         fr: "Lire 20 pages" },            desc: { en: "Read at least 20 pages of a book you're currently reading.",    fr: "Lis au moins 20 pages du livre que tu lis en ce moment." },        rewards: { focus: 3, discipline: 2 } },
-    { title: { en: "Hydration Check",       fr: "Hydratation" },              desc: { en: "Drink at least 2 liters of water throughout the day.",          fr: "Bois au moins 2 litres d'eau dans la journée." },                  rewards: { health: 3, energy: 1 } },
-    { title: { en: "No Social Media",       fr: "Zéro réseaux sociaux" },     desc: { en: "Avoid social media for at least 4 hours straight.",             fr: "Évite les réseaux sociaux pendant au moins 4h d'affilée." },       rewards: { focus: 4, discipline: 2 } },
-    { title: { en: "Walk 30 Minutes",       fr: "Marche 30 minutes" },        desc: { en: "Take a 30-minute walk outside, no phone allowed.",              fr: "Fais une marche de 30 min dehors, sans téléphone." },              rewards: { health: 2, happiness: 3, energy: 1 } },
-    { title: { en: "Journal Entry",         fr: "Écrire dans son journal" },  desc: { en: "Write at least half a page in your journal about your day.",    fr: "Écris au moins une demi-page dans ton journal sur ta journée." },  rewards: { happiness: 3, focus: 1 } },
-    { title: { en: "Cook a Healthy Meal",   fr: "Cuisiner un repas sain" },   desc: { en: "Prepare a balanced, home-cooked meal from scratch.",            fr: "Prépare un repas équilibré et fait maison." },                     rewards: { health: 4, happiness: 1 } },
-    { title: { en: "Meditate 10 Minutes",   fr: "Méditer 10 minutes" },       desc: { en: "Sit quietly and meditate for 10 minutes without distractions.",fr: "Assieds-toi et médite 10 min sans distraction." },                 rewards: { focus: 3, happiness: 2, energy: 1 } },
-    { title: { en: "Cold Shower",           fr: "Douche froide" },            desc: { en: "Take a cold shower for at least 2 minutes.",                    fr: "Prends une douche froide d'au moins 2 minutes." },                 rewards: { discipline: 4, energy: 2 } },
-    { title: { en: "Tidy Your Space",       fr: "Ranger ton espace" },        desc: { en: "Spend 15 minutes cleaning and organizing your room or desk.",   fr: "Passe 15 min à ranger et organiser ta chambre ou ton bureau." },   rewards: { discipline: 2, happiness: 2, focus: 1 } },
-    { title: { en: "Practice a Skill",      fr: "Pratiquer une compétence" }, desc: { en: "Spend 30 minutes practicing a skill you're trying to learn.",  fr: "Passe 30 min à pratiquer une compétence que tu apprends." },       rewards: { focus: 3, discipline: 3 } },
-    { title: { en: "No Junk Food",          fr: "Zéro malbouffe" },           desc: { en: "Avoid all junk food and processed snacks today.",               fr: "Évite toute la malbouffe et les snacks transformés aujourd'hui." },rewards: { health: 4, discipline: 2 } },
-    { title: { en: "Express Gratitude",     fr: "Exprimer sa gratitude" },    desc: { en: "Write down 3 things you're grateful for today.",                fr: "Note 3 choses pour lesquelles tu es reconnaissant aujourd'hui." }, rewards: { happiness: 4, focus: 1 } },
-    { title: { en: "Plan Tomorrow",         fr: "Planifier demain" },         desc: { en: "Write a clear plan for tomorrow before going to bed.",          fr: "Écris un plan clair pour demain avant de te coucher." },           rewards: { discipline: 3, focus: 2 } },
-    { title: { en: "Power Workout",         fr: "Séance de sport" },          desc: { en: "Complete a 20-minute bodyweight workout session.",               fr: "Fais une séance de 20 min d'exercices au poids du corps." },       rewards: { health: 3, energy: 3, discipline: 1 } },
-    { title: { en: "Screen-Free Hour",      fr: "1h sans écran" },            desc: { en: "Spend one full hour without any screen whatsoever.",             fr: "Passe une heure entière sans aucun écran." },                      rewards: { focus: 3, happiness: 2 } },
-    { title: { en: "Deep Work Session",     fr: "Session de deep work" },     desc: { en: "Do 45 minutes of uninterrupted, focused work on a project.",   fr: "Fais 45 min de travail concentré et ininterrompu." },              rewards: { focus: 4, discipline: 3 } },
-    { title: { en: "Connect With Someone",  fr: "Parler à quelqu'un" },       desc: { en: "Have a meaningful conversation with a friend or family.",       fr: "Aie une conversation sincère avec un proche." },                   rewards: { happiness: 4, energy: 1 } },
-    { title: { en: "Learn Something New",   fr: "Apprendre quelque chose" },  desc: { en: "Watch an educational video or read an article on a new topic.", fr: "Regarde une vidéo éducative ou lis un article sur un nouveau sujet." }, rewards: { focus: 2, happiness: 2, discipline: 1 } },
-    { title: { en: "Early Wake-Up",         fr: "Réveil matinal" },           desc: { en: "Wake up at least 1 hour earlier than usual.",                   fr: "Réveille-toi au moins 1h plus tôt que d'habitude." },              rewards: { discipline: 4, energy: 2 } },
-    { title: { en: "Digital Declutter",     fr: "Tri numérique" },            desc: { en: "Delete 20 unused apps, files, or old emails.",                  fr: "Supprime 20 applis, fichiers ou vieux emails inutilisés." },       rewards: { focus: 2, discipline: 2, happiness: 1 } },
-    { title: { en: "Posture Check",         fr: "Vérifier sa posture" },      desc: { en: "Set 5 posture reminders and correct yourself each time.",       fr: "Mets 5 rappels de posture et corrige-toi à chaque fois." },        rewards: { health: 3, discipline: 1 } },
-    { title: { en: "Creative Break",        fr: "Pause créative" },           desc: { en: "Spend 20 minutes drawing, writing, or making music.",           fr: "Passe 20 min à dessiner, écrire ou faire de la musique." },        rewards: { happiness: 3, focus: 2 } },
-    { title: { en: "Sleep by 11 PM",        fr: "Couché avant 23h" },         desc: { en: "Get into bed by 11 PM with no screens.",                        fr: "Sois au lit avant 23h, sans écran." },                             rewards: { health: 3, energy: 3 } },
-    { title: { en: "Breathing Exercise",    fr: "Exercice de respiration" },  desc: { en: "Do a 5-minute box-breathing or deep-breathing exercise.",       fr: "Fais un exercice de respiration profonde de 5 minutes." },         rewards: { focus: 2, energy: 2, happiness: 1 } },
+    { title: { en: "Rise & Stretch",         fr: "Lève-toi et brille" },         desc: { en: "Do a 10-minute stretch routine after waking up.",               fr: "Fais une routine d'étirements de 10 min au réveil." },             rewards: { health: 3, energy: 2 } },
+    { title: { en: "Bookworm Mode",           fr: "Mode rat de biblio" },          desc: { en: "Read at least 20 pages of a book you're currently reading.",    fr: "Lis au moins 20 pages du livre que tu lis en ce moment." },        rewards: { focus: 3, discipline: 2 } },
+    { title: { en: "Aqua Warrior",            fr: "Guerrier de l'hydra" },         desc: { en: "Drink at least 2 liters of water throughout the day.",          fr: "Bois au moins 2 litres d'eau dans la journée." },                  rewards: { health: 3, energy: 1 } },
+    { title: { en: "Ghost Mode",              fr: "Mode fantôme" },                desc: { en: "Avoid social media for at least 4 hours straight.",             fr: "Évite les réseaux sociaux pendant au moins 4h d'affilée." },       rewards: { focus: 4, discipline: 2 } },
+    { title: { en: "Urban Explorer",          fr: "Explorateur urbain" },          desc: { en: "Take a 30-minute walk outside, no phone allowed.",              fr: "Fais une marche de 30 min dehors, sans téléphone." },              rewards: { health: 2, happiness: 3, energy: 1 } },
+    { title: { en: "Inner Voice",             fr: "Voix intérieure" },             desc: { en: "Write at least half a page in your journal about your day.",    fr: "Écris au moins une demi-page dans ton journal sur ta journée." },  rewards: { happiness: 3, focus: 1 } },
+    { title: { en: "Chef's Kiss",             fr: "Chef en action" },              desc: { en: "Prepare a balanced, home-cooked meal from scratch.",            fr: "Prépare un repas équilibré et fait maison." },                     rewards: { health: 4, happiness: 1 } },
+    { title: { en: "Zen Master",              fr: "Maître Zen" },                  desc: { en: "Sit quietly and meditate for 10 minutes without distractions.",fr: "Assieds-toi et médite 10 min sans distraction." },                 rewards: { focus: 3, happiness: 2, energy: 1 } },
+    { title: { en: "Ice Breaker",             fr: "Bain polaire" },                desc: { en: "Take a cold shower for at least 2 minutes.",                    fr: "Prends une douche froide d'au moins 2 minutes." },                 rewards: { discipline: 4, energy: 2 } },
+    { title: { en: "Chaos Cleaner",           fr: "Chasseur de bordel" },          desc: { en: "Spend 15 minutes cleaning and organizing your room or desk.",   fr: "Passe 15 min à ranger et organiser ta chambre ou ton bureau." },   rewards: { discipline: 2, happiness: 2, focus: 1 } },
+    { title: { en: "Skill Grinder",           fr: "Grind de compétence" },         desc: { en: "Spend 30 minutes practicing a skill you're trying to learn.",  fr: "Passe 30 min à pratiquer une compétence que tu apprends." },       rewards: { focus: 3, discipline: 3 } },
+    { title: { en: "Clean Eater",             fr: "Régime spartan" },              desc: { en: "Avoid all junk food and processed snacks today.",               fr: "Évite toute la malbouffe et les snacks transformés aujourd'hui." },rewards: { health: 4, discipline: 2 } },
+    { title: { en: "Grateful Soul",           fr: "Cœur reconnaissant" },          desc: { en: "Write down 3 things you're grateful for today.",                fr: "Note 3 choses pour lesquelles tu es reconnaissant aujourd'hui." }, rewards: { happiness: 4, focus: 1 } },
+    { title: { en: "Future Architect",        fr: "Architecte du futur" },         desc: { en: "Write a clear plan for tomorrow before going to bed.",          fr: "Écris un plan clair pour demain avant de te coucher." },           rewards: { discipline: 3, focus: 2 } },
+    { title: { en: "Beast Mode",              fr: "Mode bête" },                   desc: { en: "Complete a 20-minute bodyweight workout session.",               fr: "Fais une séance de 20 min d'exercices au poids du corps." },       rewards: { health: 3, energy: 3, discipline: 1 } },
+    { title: { en: "Offline Legend",           fr: "Légende hors-ligne" },          desc: { en: "Spend one full hour without any screen whatsoever.",             fr: "Passe une heure entière sans aucun écran." },                      rewards: { focus: 3, happiness: 2 } },
+    { title: { en: "Hyperfocus",              fr: "Hyperfocus" },                  desc: { en: "Do 45 minutes of uninterrupted, focused work on a project.",   fr: "Fais 45 min de travail concentré et ininterrompu." },              rewards: { focus: 4, discipline: 3 } },
+    { title: { en: "Social Butterfly",        fr: "Papillon social" },             desc: { en: "Have a meaningful conversation with a friend or family.",       fr: "Aie une conversation sincère avec un proche." },                   rewards: { happiness: 4, energy: 1 } },
+    { title: { en: "Big Brain Time",          fr: "Mode gros cerveau" },           desc: { en: "Watch an educational video or read an article on a new topic.", fr: "Regarde une vidéo éducative ou lis un article sur un nouveau sujet." }, rewards: { focus: 2, happiness: 2, discipline: 1 } },
+    { title: { en: "Sunrise Warrior",         fr: "Guerrier de l'aube" },          desc: { en: "Wake up at least 1 hour earlier than usual.",                   fr: "Réveille-toi au moins 1h plus tôt que d'habitude." },              rewards: { discipline: 4, energy: 2 } },
+    { title: { en: "Data Purge",              fr: "Purge numérique" },             desc: { en: "Delete 20 unused apps, files, or old emails.",                  fr: "Supprime 20 applis, fichiers ou vieux emails inutilisés." },       rewards: { focus: 2, discipline: 2, happiness: 1 } },
+    { title: { en: "Spine Check",             fr: "Alerte posture" },              desc: { en: "Set 5 posture reminders and correct yourself each time.",       fr: "Mets 5 rappels de posture et corrige-toi à chaque fois." },        rewards: { health: 3, discipline: 1 } },
+    { title: { en: "Artsy Vibes",             fr: "Vibes créatives" },             desc: { en: "Spend 20 minutes drawing, writing, or making music.",           fr: "Passe 20 min à dessiner, écrire ou faire de la musique." },        rewards: { happiness: 3, focus: 2 } },
+    { title: { en: "Lights Out",              fr: "Extinction des feux" },         desc: { en: "Get into bed by 11 PM with no screens.",                        fr: "Sois au lit avant 23h, sans écran." },                             rewards: { health: 3, energy: 3 } },
+    { title: { en: "Breath of Power",         fr: "Souffle de puissance" },        desc: { en: "Do a 5-minute box-breathing or deep-breathing exercise.",       fr: "Fais un exercice de respiration profonde de 5 minutes." },         rewards: { focus: 2, energy: 2, happiness: 1 } },
     // ---- Fun quests ----
-    { title: { en: "Dance Like Nobody's Watching", fr: "Danse comme si personne ne regardait" }, desc: { en: "Put on your favorite song and dance for 5 minutes straight.",  fr: "Mets ta musique préférée et danse pendant 5 min d'affilée." },  rewards: { happiness: 4, energy: 2 } },
-    { title: { en: "Compliment a Stranger",   fr: "Complimente un inconnu" },    desc: { en: "Give a genuine compliment to someone you don't know.",          fr: "Fais un compliment sincère à quelqu'un que tu ne connais pas." }, rewards: { happiness: 3, discipline: 2 } },
-    { title: { en: "Smile at 10 People",      fr: "Souris à 10 personnes" },     desc: { en: "Make eye contact and smile at 10 different people today.",       fr: "Regarde et souris à 10 personnes différentes aujourd'hui." },     rewards: { happiness: 3, energy: 1 } },
-    { title: { en: "Try a New Food",           fr: "Goûte un nouvel aliment" },   desc: { en: "Eat something you've never tried before today.",                fr: "Mange quelque chose que tu n'as encore jamais goûté." },          rewards: { happiness: 2, health: 2, discipline: 1 } },
-    { title: { en: "Sing in the Shower",       fr: "Chante sous la douche" },     desc: { en: "Belt out at least 2 full songs in the shower.",                 fr: "Chante au moins 2 chansons en entier sous la douche." },          rewards: { happiness: 3, energy: 2 } },
-    { title: { en: "Take a Selfie With a Tree", fr: "Selfie avec un arbre" },     desc: { en: "Go outside, find a cool tree, and take a selfie with it.",      fr: "Sors, trouve un bel arbre et prends un selfie avec." },           rewards: { happiness: 2, health: 1, energy: 1 } },
-    { title: { en: "Left Hand Challenge",      fr: "Défi main gauche" },          desc: { en: "Use your non-dominant hand for everything for 1 hour.",         fr: "Utilise ta main non dominante pour tout pendant 1 heure." },       rewards: { focus: 3, discipline: 2 } },
-    { title: { en: "Write a Haiku",            fr: "Écris un haïku" },            desc: { en: "Write a haiku about your current mood (5-7-5 syllables).",      fr: "Écris un haïku sur ton humeur actuelle (5-7-5 syllabes)." },      rewards: { happiness: 2, focus: 2, discipline: 1 } },
+    { title: { en: "Main Character Energy",    fr: "Énergie de perso principal" },  desc: { en: "Put on your favorite song and dance for 5 minutes straight.",  fr: "Mets ta musique préférée et danse pendant 5 min d'affilée." },  rewards: { happiness: 4, energy: 2 } },
+    { title: { en: "Rizz a Stranger",          fr: "Rizz un inconnu" },             desc: { en: "Give a genuine compliment to someone you don't know.",          fr: "Fais un compliment sincère à quelqu'un que tu ne connais pas." }, rewards: { happiness: 3, discipline: 2 } },
+    { title: { en: "Smile Sniper",             fr: "Sniper du sourire" },           desc: { en: "Make eye contact and smile at 10 different people today.",       fr: "Regarde et souris à 10 personnes différentes aujourd'hui." },     rewards: { happiness: 3, energy: 1 } },
+    { title: { en: "Taste Adventurer",         fr: "Aventurier du goût" },          desc: { en: "Eat something you've never tried before today.",                fr: "Mange quelque chose que tu n'as encore jamais goûté." },          rewards: { happiness: 2, health: 2, discipline: 1 } },
+    { title: { en: "Shower Concert",           fr: "Concert sous la douche" },      desc: { en: "Belt out at least 2 full songs in the shower.",                 fr: "Chante au moins 2 chansons en entier sous la douche." },          rewards: { happiness: 3, energy: 2 } },
+    { title: { en: "TreeBFF",                  fr: "Pote d'arbre" },                desc: { en: "Go outside, find a cool tree, and take a selfie with it.",      fr: "Sors, trouve un bel arbre et prends un selfie avec." },           rewards: { happiness: 2, health: 1, energy: 1 } },
+    { title: { en: "Weak Hand Arc",            fr: "Arc main faible" },             desc: { en: "Use your non-dominant hand for everything for 1 hour.",         fr: "Utilise ta main non dominante pour tout pendant 1 heure." },       rewards: { focus: 3, discipline: 2 } },
+    { title: { en: "Pocket Poet",              fr: "Poète de poche" },              desc: { en: "Write a haiku about your current mood (5-7-5 syllables).",      fr: "Écris un haïku sur ton humeur actuelle (5-7-5 syllabes)." },      rewards: { happiness: 2, focus: 2, discipline: 1 } },
     // ---- Troll quests (free reroll) ----
-    { title: { en: "Talk to Your Plant",       fr: "Parle à ta plante" },         desc: { en: "Have a 5-minute motivational speech with a houseplant.",         fr: "Fais un discours motivant de 5 min à une plante d'intérieur." },  rewards: { happiness: 5 }, troll: true },
-    { title: { en: "Walk Backwards",           fr: "Marche à reculons" },         desc: { en: "Walk backwards for at least 100 steps in your apartment.",      fr: "Fais au moins 100 pas à reculons dans ton appart." },             rewards: { energy: 3, happiness: 3 }, troll: true },
-    { title: { en: "Stare at a Wall",          fr: "Fixe un mur" },               desc: { en: "Stare at a blank wall for 5 minutes. No phone. Think.",         fr: "Fixe un mur vide pendant 5 min. Sans tel. Réfléchis." },          rewards: { focus: 4, discipline: 2 }, troll: true },
-    { title: { en: "Narrate Your Life",        fr: "Narre ta vie" },              desc: { en: "Narrate everything you do out loud for 10 minutes.",            fr: "Commente à voix haute tout ce que tu fais pendant 10 min." },      rewards: { happiness: 4, focus: 1 }, troll: true },
-    { title: { en: "Eat With Chopsticks",      fr: "Mange avec des baguettes" },  desc: { en: "Eat your next meal entirely with chopsticks. Even soup.",       fr: "Mange ton prochain repas entièrement avec des baguettes. Même la soupe." }, rewards: { discipline: 3, happiness: 3 }, troll: true },
-    { title: { en: "Stand on One Leg",         fr: "Tiens sur une jambe" },        desc: { en: "Stand on one leg for 2 minutes without holding anything.",      fr: "Tiens-toi sur une jambe pendant 2 min sans rien tenir." },         rewards: { health: 2, focus: 3, discipline: 1 }, troll: true },
-    { title: { en: "Compliment Yourself",      fr: "Complimente-toi" },           desc: { en: "Look in a mirror and give yourself 5 genuine compliments.",     fr: "Regarde-toi dans un miroir et fais-toi 5 vrais compliments." },   rewards: { happiness: 5 }, troll: true },
-    { title: { en: "Invent a Word",            fr: "Invente un mot" },            desc: { en: "Create a new word, define it, and use it 3 times today.",       fr: "Invente un nouveau mot, définis-le et utilise-le 3 fois aujourd'hui." }, rewards: { happiness: 3, focus: 2 }, troll: true },
-    { title: { en: "Speed Clean Boss Mode",    fr: "Ménage mode boss" },          desc: { en: "Set a 3-minute timer and clean as fast as humanly possible.",   fr: "Mets un chrono de 3 min et nettoie aussi vite que possible." },    rewards: { discipline: 3, energy: 2, happiness: 1 }, troll: true },
-    { title: { en: "Dramatic Reading",         fr: "Lecture dramatique" },         desc: { en: "Read a random text message out loud like a Shakespeare play.",  fr: "Lis un SMS random à voix haute comme du Shakespeare." },           rewards: { happiness: 4, focus: 1 }, troll: true },
+    { title: { en: "Plant Therapist",          fr: "Psy de plante verte" },         desc: { en: "Have a 5-minute motivational speech with a houseplant.",         fr: "Fais un discours motivant de 5 min à une plante d'intérieur." },  rewards: { happiness: 5 }, troll: true },
+    { title: { en: "Reverse Gear",             fr: "Mode marche arrière" },         desc: { en: "Walk backwards for at least 100 steps in your apartment.",      fr: "Fais au moins 100 pas à reculons dans ton appart." },             rewards: { energy: 3, happiness: 3 }, troll: true },
+    { title: { en: "Wall Whisperer",           fr: "Le fixeur de mur" },            desc: { en: "Stare at a blank wall for 5 minutes. No phone. Think.",         fr: "Fixe un mur vide pendant 5 min. Sans tel. Réfléchis." },          rewards: { focus: 4, discipline: 2 }, troll: true },
+    { title: { en: "Life Commentator",         fr: "Commentateur de vie" },         desc: { en: "Narrate everything you do out loud for 10 minutes.",            fr: "Commente à voix haute tout ce que tu fais pendant 10 min." },      rewards: { happiness: 4, focus: 1 }, troll: true },
+    { title: { en: "Chopstick Chaos",          fr: "Chaos aux baguettes" },         desc: { en: "Eat your next meal entirely with chopsticks. Even soup.",       fr: "Mange ton prochain repas entièrement avec des baguettes. Même la soupe." }, rewards: { discipline: 3, happiness: 3 }, troll: true },
+    { title: { en: "Flamingo Mode",            fr: "Mode flamant rose" },           desc: { en: "Stand on one leg for 2 minutes without holding anything.",      fr: "Tiens-toi sur une jambe pendant 2 min sans rien tenir." },         rewards: { health: 2, focus: 3, discipline: 1 }, troll: true },
+    { title: { en: "Mirror Hype",              fr: "Hype au miroir" },              desc: { en: "Look in a mirror and give yourself 5 genuine compliments.",     fr: "Regarde-toi dans un miroir et fais-toi 5 vrais compliments." },   rewards: { happiness: 5 }, troll: true },
+    { title: { en: "Word Inventor",            fr: "Inventeur de mots" },           desc: { en: "Create a new word, define it, and use it 3 times today.",       fr: "Invente un nouveau mot, définis-le et utilise-le 3 fois aujourd'hui." }, rewards: { happiness: 3, focus: 2 }, troll: true },
+    { title: { en: "Speed Clean Demon",        fr: "Démon du ménage rapide" },      desc: { en: "Set a 3-minute timer and clean as fast as humanly possible.",   fr: "Mets un chrono de 3 min et nettoie aussi vite que possible." },    rewards: { discipline: 3, energy: 2, happiness: 1 }, troll: true },
+    { title: { en: "Shakespeare Mode",         fr: "Mode Shakespeare" },            desc: { en: "Read a random text message out loud like a Shakespeare play.",  fr: "Lis un SMS random à voix haute comme du Shakespeare." },           rewards: { happiness: 4, focus: 1 }, troll: true },
   ];
 
   // ---- Bonus wacky quest pool (unlocked after completing all daily quests) ----
@@ -214,12 +214,14 @@
 
   let state = loadState();
 
+  const QUEST_VERSION = 2; // bump to force quest regeneration on title changes
+
   // ---- Quest Generation ----
   function generateDailyQuests() {
     const today = todayKey();
-    // Force regenerate if quests are in old format (plain string instead of {en, fr})
     const needsReformat = state.quests.length > 0 && typeof state.quests[0].title === "string";
-    if (state.today === today && state.quests.length > 0 && !needsReformat) return;
+    const outdated = (state.questVersion || 0) < QUEST_VERSION;
+    if (state.today === today && state.quests.length > 0 && !needsReformat && !outdated) return;
 
     state.today = today;
     state.completedIndices = [];
@@ -236,6 +238,7 @@
     }));
     state.bonusQuests = [];
     state.bonusUnlocked = false;
+    state.questVersion = QUEST_VERSION;
     // Count troll quests for free rerolls
     countTrollFreeRerolls();
     saveState();
@@ -494,7 +497,7 @@
       }
 
       const remixDisabled = q.troll ? (state.freeRerolls <= 0) : !canRemix;
-      const remixLabel = q.troll ? t("freeReroll") : t("remix");
+      const remixCost = q.troll ? "0" : "1";
 
       return `
         <div class="quest-card ${q.troll ? 'troll' : ''}">
@@ -509,7 +512,7 @@
               ${t("validate")}
             </button>
             <button class="btn btn-remix" onclick="window._remixQuest(${i})" ${remixDisabled ? "disabled" : ""}>
-              ↻ ${remixLabel}
+              ↻ ${remixCost}
             </button>
           </div>
         </div>`;
